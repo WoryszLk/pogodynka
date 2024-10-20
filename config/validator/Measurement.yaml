@@ -1,0 +1,11 @@
+App\Entity\Measurement:
+  properties:
+    location:
+      - NotBlank: { message: 'Location must be provided' }
+
+    celsius:
+      - NotBlank: { message: 'Temperature is required' }
+      - Range:
+          min: -100
+          max: 100
+          notInRangeMessage: 'Temperature must be between -100 and 100 degrees Celsius'
